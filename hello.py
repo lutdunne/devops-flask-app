@@ -5,7 +5,11 @@ app = Flask(__name__)
 @app.route('/')
 def say_hello():
 	return '''
+<<<<<<< HEAD
         	<p>This is another string!</p>
+=======
+        	<p>Welcome!</p>
+>>>>>>> new_greeting
         	<p><a href="/about">About</a> | <a href="/contact">Contact</a></p>
     	'''
 
