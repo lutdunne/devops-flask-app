@@ -6,7 +6,13 @@ r = redis.Redis(host='redis-server', port=6379, decode_responses=True)
 
 @app.route('/')
 def say_hello():
-    html = '<p>Welcome, I am a Flask app! <a href="./contact">Contact</a></p>'
+    html = '''
+        <p>Welcome, I am a Flask app!</p>
+        <p>
+            <a href="/about">About</a> | 
+            <a href="/contact">Contact</a>
+        </p>
+    '''
     return html
 
 
