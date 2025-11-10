@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: flaskapp-service
 spec:
-  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 5000
   selector:
     app: flaskapp
-  ports:
-    - name: http
-      port: 5000
-      targetPort: 5000
+  type: LoadBalancer
